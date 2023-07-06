@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <tittle>hihi</tittle>
+</head>
+<body>
+<h1>Welcome</h1>
+<ul>
+    <li th:text="${x + y}"></li>
+    <li th:text="${x % y}"></li>
+    <li th:text="not ${x > y}"></li>
+    <li th:text="${x gt y} and ${x == y}"></li>
+    <li th:text="${x > y} ? 'OK' : 'Cancel'"></li>
+    <li th:text="'/a/b/' + ${x} + '/' + ${y}"></li>
+    <li th:text="@{/a/b/{p1}/{p2}(p1=${x},p2=${y})}"></li>
+
+
+</ul>
+</body>
+</html>
